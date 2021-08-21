@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer formulario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+</head>
+<body>
+    <form method="GET" enctype="application/x-www-form-urlencoded"
+    action="/noexiste.html">
+
+    <div class="field"></div>
+<p>
+    
+    <label>Nombre <br>
+        <input type="text" name="nombre_cliente" required class="input is-primary is-rounded">
+    </label>
+
+</p>
+<p>
+    <label>Telefono <br>
+        <input type="tel" name="numero_telefono" required class="input is-primary is-rounded ">
+    </label>
+</p>
+<p>
+    <label>Email <br>
+        <input type="email" name="direccion_correo" required class="input is-primary is-rounded ">
+    </label>
+</p>
+</div>
+<fieldset>
+    <legend>Que taxi quiere?</legend>
+    <p>
+        <label>
+            <input type="radio" name="taxi" required value="car">
+            Carrito
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="radio" name="taxi" required value="van">
+            Suv
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="radio" name="taxi" required value="tuktuk">
+           tuk tuk
+        </label>
+    </p>
+</fieldset>
+
+<fieldset>
+    <legend>Extras</legend>
+    <p>
+        <label>
+            <input type="checkbox" name="extras" value="baby">
+            Silla de bebe
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="checkbox" name="extras" value="musica">
+            No reggaeton
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="checkbox" name="extras" value="Silla de ruedas">
+            Silla de ruedas
+        </label>
+    </p>
+    <p>
+        <label>Dia y hora?
+            <input type="datetime-local" name="fecha_hora" required>
+        </label>
+    </p>
+    <p>
+        <label>Lugar para recoger
+            <div class="select is-primary">
+            <select name="pickup_place" id="pickup_place" >
+                <option value="" selected = "selected" class="select is-primary">Seleccione opcion</option>
+                <option value="Oficina">Oficina</option>
+                <option value="Feria">La feria</option>
+                <option value="La_U">La universidad</option>
+                <option value="no_se">LE digo al cacho</option>
+            </select>
+        </div>
+        </label>
+    </p>
+
+    <p>
+        <label>Dejar en:
+            <input type="text" name="dejar_en" required list="destino">
+        </label>
+
+        <datalist id="destino">
+            <option value="Aeropuerto"></option>
+            <option value="Playa"></option>
+            <option value="Centro"></option>
+        </datalist>
+    </p>
+
+</fieldset>
+
+<p>
+    <button>Hacer cita</button>
+</p>
+
+
+</form>
+</body>
+</html>

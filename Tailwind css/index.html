@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer formulario</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+   
+<div class="bg-green-500 text-white text-xl py-32 px-10 ">
+ 
+      
+    <form method="GET" enctype="application/x-www-form-urlencoded"
+    action="/noexiste.html" class="md:w1/2 mx-auto" >
+
+   <div class="flex  " >
+<p >
+    <label class="w-20 text-right mr-8" >Nombre
+        <input type="text" name="nombre_cliente" required class=" flex-1 text-green-600">
+    </label>
+</p>
+<p>
+    <label class="w-20 text-right mr-8">Telefono
+        <input type="tel" name="numero_telefono" required class="flex-1 text-green-600">
+    </label>
+</p>
+<p>
+    <label class="w-20 text-right mr-8">Email
+        <input type="email" name="direccion_correo" required class="flex-1 text-green-600">
+    </label>
+</p>
+</div>
+<br>
+
+
+<fieldset >
+    <legend>Que taxi quiere?</legend>
+    <p>
+        <label >
+            <input type="radio" name="taxi" required value="car" >
+            Carrito
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="radio" name="taxi" required value="van">
+            Suv
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="radio" name="taxi" required value="tuktuk">
+           tuk tuk
+        </label>
+    </p>
+</fieldset >
+
+<br>
+<fieldset > 
+    <legend>Extras</legend>
+    <p>
+        <label>
+            <input type="checkbox" name="extras" value="baby">
+            Silla de bebe
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="checkbox" name="extras" value="musica">
+            No reggaeton
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="checkbox" name="extras" value="Silla de ruedas">
+            Silla de ruedas
+        </label>
+    </p>
+    <br>
+    <div class="flex">
+    <p>
+        <label class="w-20 text-right mr-8">Dia y hora?
+            <input type="datetime-local" name="fecha_hora" required class="rounded-full py-1 px-3">
+        </label>
+    </p>
+    <p>
+        <label class="w-20 text-right mr-8">Lugar para recoger
+            <select name="pickup_place" id="pickup_place" class="rounded-full py-1 px-3 text-green-600">
+                <option value="" selected = "selected">Seleccione opcion</option>
+                <option value="Oficina">Oficina</option>
+                <option value="Feria">La feria</option>
+                <option value="La_U">La universidad</option>
+                <option value="no_se">LE digo al cacho</option>
+            </select>
+        </label>
+    </p>
+   
+
+    <p>
+        <label class="w-20 text-right mr-8">Dejar en:
+            <input type="text" name="dejar_en" required list="destino" class="rounded-full py-1 px-3 text-green-600">
+        </label>
+
+        <datalist id="destino">
+            <option value="Aeropuerto"></option>
+            <option value="Playa"></option>
+            <option value="Centro"></option>
+        </datalist>
+    </p>
+</div>
+</fieldset>
+
+<p>
+    <button class="rounded-full">Hacer cita</button>
+</p>
+
+
+</form>
+</div>
+
+</body>
+</html>
